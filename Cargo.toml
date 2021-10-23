@@ -1,0 +1,19 @@
+[package]
+name = "ps_rust"
+version = "0.1.0"
+authors = ["thebeastxdxd <idoba12@gmail.com>"]
+edition = "2018"
+
+[[bin]]
+name = "ps_rust"
+path = "src/main.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
